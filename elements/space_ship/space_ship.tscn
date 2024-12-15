@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm6derl2fg31"]
+
+[ext_resource type="Texture2D" uid="uid://bbgg66voy5orf" path="res://asserts/ship.png" id="1_dxnbo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ratne"]
+radius = 344.0
+height = 1136.0
+
+[node name="SpaceShip" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dxnbo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, -3)
+shape = SubResource("CapsuleShape2D_ratne")

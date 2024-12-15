@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuetbviqks2bf"]
+
+[ext_resource type="Texture2D" uid="uid://jxuafpajc21a" path="res://asserts/background.png" id="1_tbkxj"]
+[ext_resource type="PackedScene" uid="uid://cm6derl2fg31" path="res://elements/space_ship/space_ship.tscn" id="2_x5ppg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(512, 378)
+scale = Vector2(1.79688, 2.15556)
+texture = ExtResource("1_tbkxj")
+region_rect = Rect2(0, 0, 1024, 768)
+
+[node name="SpaceShip" parent="." instance=ExtResource("2_x5ppg")]
+position = Vector2(536, 546)
+scale = Vector2(0.110645, 0.110645)
