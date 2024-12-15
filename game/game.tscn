@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuetbviqks2bf"]
+[gd_scene load_steps=6 format=3 uid="uid://cuetbviqks2bf"]
 
 [ext_resource type="Texture2D" uid="uid://jxuafpajc21a" path="res://asserts/background.png" id="1_tbkxj"]
 [ext_resource type="PackedScene" uid="uid://cm6derl2fg31" path="res://elements/space_ship/space_ship.tscn" id="2_x5ppg"]
+[ext_resource type="PackedScene" uid="uid://4u3a74o67mlq" path="res://elements/wall/wall.tscn" id="3_3p2vf"]
+[ext_resource type="Script" path="res://elements/space_ship/space_ship.gd" id="3_p5nqw"]
+[ext_resource type="PackedScene" uid="uid://dt6u7k3koi2qo" path="res://elements/enemy/enemy.tscn" id="4_5vju0"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,5 +16,31 @@ texture = ExtResource("1_tbkxj")
 region_rect = Rect2(0, 0, 1024, 768)
 
 [node name="SpaceShip" parent="." instance=ExtResource("2_x5ppg")]
-position = Vector2(536, 546)
+position = Vector2(490, 680)
 scale = Vector2(0.110645, 0.110645)
+script = ExtResource("3_p5nqw")
+
+[node name="Wall" parent="." instance=ExtResource("3_3p2vf")]
+
+[node name="Wall2" parent="." instance=ExtResource("3_3p2vf")]
+position = Vector2(1026, 0)
+
+[node name="Enemy" parent="Wall2" instance=ExtResource("4_5vju0")]
+position = Vector2(-145, 165)
+scale = Vector2(1.52, 1.52)
+
+[node name="Enemy2" parent="Wall2" instance=ExtResource("4_5vju0")]
+position = Vector2(-353, 105)
+scale = Vector2(1.52, 1.52)
+
+[node name="Enemy3" parent="Wall2" instance=ExtResource("4_5vju0")]
+position = Vector2(-549, 184)
+scale = Vector2(1.52, 1.52)
+
+[node name="Enemy4" parent="Wall2" instance=ExtResource("4_5vju0")]
+position = Vector2(-777, 105)
+scale = Vector2(1.52, 1.52)
+
+[node name="Enemy5" parent="Wall2" instance=ExtResource("4_5vju0")]
+position = Vector2(-918, 223)
+scale = Vector2(1.52, 1.52)
